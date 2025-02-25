@@ -3,20 +3,20 @@
 <head>
   <meta charset="utf-8">
   <title>OASIS 2024</title>
+  <script src="https://unpkg.com/shinylive@0.2.0/dist/shinylive.js"></script>
   <link rel="stylesheet" href="shinylive/shinylive.css">
 </head>
 <body>
   <div id="app"></div>
-  <script type="module">
-    import { Shinylive } from './shinylive/shinylive.js';
+  <script type="text/javascript">
     window.onload = function() {
-      if (typeof Shinylive !== "undefined") {
-        Shinylive.runApp({
+      if (typeof window.Shinylive !== "undefined") {
+        window.Shinylive.runApp({
           appJsonUrl: "app.json",
           container: document.getElementById("app")
         });
       } else {
-        console.error("Shinylive not loaded");
+        console.error("Shinylive not loaded from CDN");
       }
     };
   </script>
