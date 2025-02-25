@@ -3,12 +3,12 @@
 <head>
   <meta charset="utf-8">
   <title>OASIS 2024</title>
-  <script src="shinylive/shinylive.js"></script>
   <link rel="stylesheet" href="shinylive/shinylive.css">
 </head>
 <body>
   <div id="app"></div>
-  <script type="text/javascript">
+  <script type="module">
+    import { Shinylive } from './shinylive/shinylive.js';
     window.onload = function() {
       if (typeof Shinylive !== "undefined") {
         Shinylive.runApp({
