@@ -9,9 +9,15 @@
 <body>
   <div id="app"></div>
   <script type="text/javascript">
-    Shinylive.runApp({
-      appJsonUrl: "app.json",
-      container: document.getElementById("app")
+    document.addEventListener('DOMContentLoaded', function () {
+      if (typeof Shinylive !== 'undefined') {
+        Shinylive.runApp({
+          appJsonUrl: "app.json",
+          container: document.getElementById("app")
+        });
+      } else {
+        console.error('Shinylive failed to load.');
+      }
     });
   </script>
 </body>
